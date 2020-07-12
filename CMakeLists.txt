@@ -1,26 +1,38 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(brics_actuator)
 
-find_package(catkin REQUIRED COMPONENTS message_generation geometry_msgs)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
-add_message_files(FILES 
-	CartesianPose.msg
-	CartesianTwist.msg
-	CartesianVector.msg
-	CartesianWrench.msg
-	JointAccelerations.msg
-	JointConstraint.msg
-	JointImpedances.msg
-	JointPositions.msg
-	JointTorques.msg
-	JointValue.msg
-	JointVelocities.msg
-	Poison.msg
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+
+set(msg_files
+	msg/CartesianPose.msg
+	msg/CartesianTwist.msg
+	msg/CartesianVector.msg
+	msg/CartesianWrench.msg
+	msg/JointAccelerations.msg
+	msg/JointConstraint.msg
+	msg/JointImpedances.msg
+	msg/JointPositions.msg
+	msg/JointTorques.msg
+	msg/JointValue.msg
+	msg/JointVelocities.msg
+	msg/Poison.msg
 )
 
-generate_messages(DEPENDENCIES geometry_msgs)
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+  DEPENDENCIES geometry_msgs builtin_interfaces
+)
 
-find_package(catkin REQUIRED)
+ament_export_dependencies(rosidl_default_runtime)
 
-catkin_package()
-
+ament_package()
