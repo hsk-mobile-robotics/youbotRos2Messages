@@ -1,3 +1,102 @@
 - 
   ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'CartesianPose'
   ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'CartesianPose'
+  fields_1_to_2:
+    timeStamp: 'timestamp'
+    poisonStamp: 'poison_stamp'
+    base_frame_uri: 'base_frame_uri'
+    target_frame_uri: 'target_frame_uri'
+    position: 'position'
+    orientation: 'orientation'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'CartesianTwist'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'CartesianTwist'
+  fields_1_to_2:
+    timeStamp: 'timestamp'
+    poisonStamp: 'poison_stamp'
+    base_frame_uri: 'base_frame_uri'
+    target_frame_uri: 'target_frame_uri'
+    translation: 'translation '
+    rotation: 'rotation'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'CartesianVector'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'CartesianVector'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'CartesianWrench'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'CartesianWrench'
+  fields_1_to_2:
+    timeStamp: 'timestamp'
+    poisonStamp: 'poison_stamp'
+    base_frame_uri: 'base_frame_uri'
+    target_frame_uri: 'target_frame_uri'
+    force: 'force'
+    torque: 'torque'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'JointAccelerations'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'JointAccelerations'
+  fields_1_to_2:
+    poisonStamp: 'poison_stamp'
+    accelerations: 'accelerations'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'JointConstraint'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'JointConstraint'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'JointImpedances'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'JointImpedances'
+  fields_1_to_2:
+    poisonStamp: 'poison_stamp'
+    dampings: 'dampings'
+    stiffnesses: 'stiffnesses'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'JointPositions'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'JointPositions'
+  fields_1_to_2:
+    poisonStamp: 'poison_stamp'
+    positions: 'positions'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'JointTorques'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'JointTorques'
+  fields_1_to_2:
+    poisonStamp: 'poison_stamp'
+    torques: 'torques'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'JointValue'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'JointValue'
+  fields_1_to_2:
+    timeStamp: 'timestamp'
+    joint_uri: 'joint_uri'
+    unit: 'unit'
+    value: 'value'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'JointVelocities'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'JointVelocities'
+  fields_1_to_2:
+    poisonStamp: 'poison_stamp'
+    velocities: 'velocities'
+-
+  ros1_package_name: 'brics_actuator'
+  ros1_message_name: 'Poison'
+  ros2_package_name: 'brics_actuator'
+  ros2_message_name: 'Poison'
