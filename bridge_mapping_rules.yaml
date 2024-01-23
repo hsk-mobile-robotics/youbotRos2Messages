@@ -20,7 +20,7 @@
     poisonStamp: 'poison_stamp'
     base_frame_uri: 'base_frame_uri'
     target_frame_uri: 'target_frame_uri'
-    translation: 'translation '
+    translation: 'translation'
     rotation: 'rotation'
 -
   ros1_package_name: 'brics_actuator'
